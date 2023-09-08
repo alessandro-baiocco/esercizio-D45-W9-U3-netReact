@@ -52,7 +52,7 @@ const MyTopBar = () => {
               />
             </Dropdown.Toggle>
 
-            <Dropdown.Menu className="bg-dark text-light">
+            <Dropdown.Menu className="bg-dark text-light" style={{ left: "-38px" }}>
               <Dropdown.Item href="#/action-1" className="text-light">
                 profile
               </Dropdown.Item>
