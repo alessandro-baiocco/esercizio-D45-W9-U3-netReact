@@ -44,7 +44,7 @@ class TrendingNow extends Component {
         <h2 className="text-light fs-4 mb-3">{this.props.title}</h2>
         <Row className="gx-1">
           {this.state.Search &&
-            this.state.Search.map((film, index) => (
+            this.state.Search.slice(0, 6).map((film, index) => (
               <Col xs={6} md={4} lg={3} xl={2} className="gx-0" key={`film-${index}`}>
                 <img src={film.Poster} alt={film.Title} className="p-0" height={"100%"} width={"100%"} />
               </Col>

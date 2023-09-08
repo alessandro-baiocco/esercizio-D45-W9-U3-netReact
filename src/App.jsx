@@ -15,6 +15,7 @@ function App() {
       <MyTopBar />
       <Header />
       <MyHome />
+
       <MyFooter />
       {/* <ProfileNav />
       <ProfileBody /> */}
