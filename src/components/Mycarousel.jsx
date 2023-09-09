@@ -1,5 +1,4 @@
-import { Alert, CarouselItem, Container, Spinner, Carousel, Row } from "react-bootstrap";
-import image from "./Netflix-assets/assets/media/media1.jpg";
+import { Alert, CarouselItem, Container, Spinner, Carousel, Row, Col } from "react-bootstrap";
 import { Component } from "react";
 
 class MyCarousel extends Component {
@@ -43,22 +42,28 @@ class MyCarousel extends Component {
         )}
         {this.state.loading && <Spinner animation="grow" variant="info" />}
         <h2 className="text-light fs-4 mb-3">{this.props.title}</h2>
-        <Row className="gx-1">
-          <Carousel>
-            <Carousel.Item className="gx-0">
+        <Carousel>
+          <Carousel.Item className="gx-0">
+            <Row className="gx-1">
               {this.state.Search &&
                 this.state.Search.slice(0, 6).map((film, index) => (
-                  <img src={film.Poster} alt={film.Title} key={`film-${index}`} width={"16%"} height={"200px"} />
+                  <Col xs={6} md={4} lg={2}>
+                    <img src={film.Poster} alt={film.Title} key={`film-${index}`} height={"200px"} width={"100%"} />
+                  </Col>
                 ))}
-            </Carousel.Item>
-            <Carousel.Item className="gx-0">
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item className="gx-0">
+            <Row className="gx-1">
               {this.state.Search &&
-                this.state.Search.slice(6, 13).map((film, index) => (
-                  <img src={film.Poster} alt={film.Title} key={`film-${index}`} width={"16%"} height={"200px"} />
+                this.state.Search.slice(4, 11).map((film, index) => (
+                  <Col xs={6} md={4} lg={2}>
+                    <img src={film.Poster} alt={film.Title} key={`film-${index}`} height={"200px"} width={"100%"} />
+                  </Col>
                 ))}
-            </Carousel.Item>
-          </Carousel>
-        </Row>
+            </Row>
+          </Carousel.Item>
+        </Carousel>
       </Container>
     );
   }

@@ -9,6 +9,8 @@ import ProfileBody from "./components/profile Page/ProfileBody";
 import SettingsNav from "./components/settings page/SettingsNav";
 import SettingsBody from "./components/settings page/SettingsBody";
 import MyCarousel from "./components/Mycarousel";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
       <Header />
       <MyHome />
       <MyFooter />
+
       {/* <ProfileNav />
       <ProfileBody /> */}
+
       {/* <SettingsNav />
       <SettingsBody /> */}
     </>
